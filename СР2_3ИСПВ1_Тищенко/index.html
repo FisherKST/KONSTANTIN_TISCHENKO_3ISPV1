@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самостоятельная работа</title>
+    <style>
+        #textBlock {
+            margin: 10px 0;
+        }
+        #itemList li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Самостоятельная работа</h1>
+
+    <h2>1. Создание элемента</h2>
+    <button onclick="createDiv('Это новый элемент <div>')">Создать элемент</button>
+
+    <h2>2. Удаление элементов по клику</h2>
+    <button onclick="addDivs()">Добавить элементы</button>
+
+    <h2>3. Изменение стиля элементов</h2>
+    <button id="changeStyle">Изменить стиль</button>
+    <div>Первый элемент</div>
+    <div>Второй элемент</div>
+    <div>Третий элемент</div>
+
+    <h2>4. Счетчик кликов</h2>
+    <button id="clickButton">Кликни меня</button>
+    <div id="counter">0</div>
+
+    <h2>5. Добавление элементов через форму</h2>
+    <form id="myForm">
+        <input type="text" id="inputText" placeholder="Введите текст" required>
+        <button type="submit">Добавить</button>
+    </form>
+    <ul id="myList"></ul>
+
+    <h2>6. Изменение текста по наведению</h2>
+    <div id="hoverText">Наведи курсор на меня!</div>
+
+    <h2>7. Динамическая фильтрация списка</h2>
+    <input type="text" id="filterInput" placeholder="Фильтр">
+    <ul id="itemList">
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+        <li>Элемент 4</li>
+    </ul>
+
+    <h2>8. Изменение изображения по клику</h2>
+    <img id="myImage" src="image1.jpg" alt="Изображение" style="cursor:pointer;">
+
+    <h2>9. Отображение и скрытие текста</h2>
+    <div id="textBlock">Это текстовый блок.</div>
+    <button id="toggleButton">Скрыть</button>
+
+    <script>
+        function createDiv(text) {
+            const div = document.createElement('div');
+            div.innerHTML = text;
+            document.body.appendChild(div);
+        }
+
+        function addDivs() {
+            for (let i = 0; i < 5; i++) {
+                const div = document.createElement('div');
+                div.textContent = `Элемент ${i + 1}`;
+                div.onclick = function() {
+                    this.remove();
+                };
+                document.body.appendChild(div);
+            }
+        }
+
+        document.getElementById('changeStyle').onclick = function() {
+            const divs = document.querySelectorAll('div');
+            divs.forEach(div => {
+                div.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+                div.style.color = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            });
+        };
+
+        let count = 0;
+        document.getElementById('clickButton').onclick = function() {
+            count++;
+            document.getElementById('counter').textContent = count;
+        };
+
+        document.getElementById('myForm').onsubmit = function(event) {
+            event.preventDefault();
+            const input = document.getElementById('inputText');
+            const li = document.createElement('li');
+            li.textContent = input.value;
+            document.getElementById('myList').appendChild(li);
+            input.value = '';
+        };
+
+        const hoverText = document.getElementById('hoverText');
+        const originalText = hoverText.textContent;
+
+        hoverText.onmouseover = function() {
+            this.textContent = 'Вы навели курсор!';
+        };
+
+        hoverText.onmouseout = function() {
+            this.textContent = originalText;
+        };
+
+        document.getElementById('filterInput').oninput = function() {
+            const filter = this.value.toLowerCase();
+            const items = document.querySelectorAll('#itemList li');
+            items.forEach(item => {
+                if (item.textContent.toLowerCase().includes(filter)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        };
+
+        const img = document.getElementById('myImage');
+        const img1 = 'image1.jpg';
+        const img2 = 'image2.jpg';
+
+        img.onclick = function() {
+            this.src = this.src.includes('image1.jpg') ? img2 : img1;
+        };
+
+        const textBlock = document.getElementById('textBlock');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.onclick = function() {
+            if (textBlock.style.display === 'none') {
+                textBlock.style.display = '';
+                this.textContent = 'Скрыть';
+            } else {
+                textBlock.style.display = 'none';
+                this.textContent = 'Показать';
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: #0073e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 400px;
+    color: white;
+}
+
+.nav a { 
+    color: white;
+    text-decoration: none; 
+    margin-right: 20px;
+}
+
+.nav a:hover {
+    text-decoration: underline; 
+    color: rgb(170, 170, 170); 
+}
+
+.nav a:active {
+    color: black; 
+}
+
+.nav a:last-child {
+    margin-right: 0;
+}
+
+.content {
+    background-color: #f4f4f4; 
+    padding: 100px;
+    display: flex;
+    justify-content: center; 
+}
+
+.rectangle {
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    padding: 20px;
+    border-radius: 10px; 
+    width: 1000px; 
+    text-align: center;
+}
+
+.learn-more {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    background-color: #218838; 
+}
+
+.services-title {
+    font-size: 40px;
+    text-align: center; 
+    color: #0073e6; 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f4f4f4; 
+    color: #000000; 
+    justify-content: center;
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 10px; 
+    width: 500px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+}
+
+.card-title {
+    color: #0073e6; 
+    text-align: center;
+    margin-bottom: 5px; 
+}
+
+.forma {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 20px;
+    border-radius: 10px; 
+    background-color: #f9f9f9; 
+}
+
+label {
+    display: block; 
+    margin: 10px 0 10px; 
+}
+
+input, textarea {
+    width: 98%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+button {
+    background-color: #0073e6; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #005bb5; 
+}
+
+.application {
+    color: #0073e6;
+}
+
+footer {
+    background-color: #333; 
+    color: white; 
+    padding: 20px 0; 
+    text-align: center; 
+}
+
+.footer-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.footer-links {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.footer-links li {
+    display: inline; 
+    margin: 0 15px; 
+}
+
+.footer-links a {
+    color: #005bb5; 
+    text-decoration: none; 
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
