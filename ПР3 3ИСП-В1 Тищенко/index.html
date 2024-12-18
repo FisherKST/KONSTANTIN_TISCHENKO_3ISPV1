@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия по Азии</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('image1.jpg');">
+                <div class="content">
+                    <span class="badge">ПРИКЛЮЧЕНИЯ</span>
+                    <h1>Фотореалистичные пейзажи Азии: как на настоящих фото</h1>
+                    <p>08.08.2024 — Откройте для себя мир культуры и традиций Востока через уникальные фотографии.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span class="badge">ПУТЕШЕСТВИЯ</span>
+                    <h1>Исследуйте чудеса Азии</h1>
+                    <p>01.05.2024 — Откройте тайные уголки Востока вместе с нами и погрузитесь в атмосферу традиций.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <span class="nav-dot active" onclick="currentSlide(0)"></span>
+            <span class="nav-dot" onclick="currentSlide(1)"></span>
+        </div>
+    </section>
+
+    <section class="cards">
+        <h2>Наши туры по Азии</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Тур по Японии</h3>
+                <p>Откройте для себя уникальные храмы, парки и традиционные фестивали Японии.</p>
+                <span class="badge">ЯПОНИЯ</span>
+            </div>
+            <div class="card">
+                <h3>Путешествие в Таиланд</h3>
+                <p>Насладитесь белоснежными пляжами и удивительной культурой Таиланда.</p>
+                <span class="badge">ТАИЛАНД</span>
+            </div>
+            <div class="card">
+                <h3>Тайны Индии</h3>
+                <p>Погрузитесь в богатую историю и духовные традиции Индии.</p>
+                <span class="badge">ИНДИЯ</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Фотогалерея</h2>
+        <div class="gallery-container">
+            <img src="gallery1.jpg" alt="Фото 1">
+            <img src="gallery2.jpg" alt="Фото 2">
+            <img src="gallery3.jpg" alt="Фото 3">
+            <img src="gallery4.jpg" alt="Фото 4">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <p>mike@runo.com</p>
+            <p>+944 450 904 505</p>
+        </div>
+        <div class="footer-column">
+            <h3>Дополнительно</h3>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Реклама</a></li>
+                <li><a href="#">Членство</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Адрес</h3>
+            <p>191 Middleville Road,<br> NY 1001, Сидней, Австралия</p>
+        </div>
+        <div class="footer-column">
+            <h3>Социальные сети</h3>
+            <div class="social-icons">
+                <a href="#"><img src="vk-icon.svg" alt="VK"></a>
+                <a href="#"><img src="whatsapp-icon.svg" alt="WhatsApp"></a>
+                <a href="#"><img src="telegram-icon.svg" alt="Telegram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
